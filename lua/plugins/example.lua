@@ -1,6 +1,6 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
-if true then return {} end
+-- if true then return {} end
 
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
 --
@@ -211,7 +211,32 @@ return {
       },
     },
   },
-
+{
+  "gbprod/substitute.nvim",
+  config = function()
+    require("substitute").setup({
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    })
+  end
+},
+{
+  "nvim-lua/plenary.nvim",
+},
+{
+ "mg979/vim-visual-multi"
+},
+{
+  "ThePrimeagen/harpoon",
+  config = function()
+    require("harpoon").setup({
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    })
+  end
+},
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
