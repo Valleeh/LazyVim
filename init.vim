@@ -29,17 +29,17 @@ let mapleader = " "
 map <BS> <Leader>
 if exists('g:vscode')
 
-  call plug#begin("~/.vim/plugged")
-  Plug 'tpope/vim-capslock'
-  Plug 'easymotion/vim-easymotion'
-  Plug 'svermeulen/vim-subversive'
-  Plug 'tpope/vim-surround'
-  Plug 'Pocco81/auto-save.nvim'
-  Plug 'Tpope/vim-commentary'
-  Plug 'asvetliakov/vim-easymotion'
-  " Plug 'inkarkat/vim-mark'
-  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-  call plug#end()
+  " call plug#begin("~/.vim/plugged")
+  " Plug 'tpope/vim-capslock'
+  " Plug 'easymotion/vim-easymotion'
+  " Plug 'svermeulen/vim-subversive'
+  " Plug 'tpope/vim-surround'
+  " Plug 'Pocco81/auto-save.nvim'
+  " Plug 'Tpope/vim-commentary'
+  " Plug 'asvetliakov/vim-easymotion'
+  " " Plug 'inkarkat/vim-mark'
+  " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  " call plug#end()
 else
   call plug#begin("~/.vim/plugged")
   Plug 'Pocco81/auto-save.nvim'
@@ -246,6 +246,13 @@ noremap <leader>vb :VisualBlock<CR>
 " ------------------------------------------------------------------------------------------
 if exists('g:vscode')
   " nnoremap gcc <Cmd>call VSCodeNotify('editor.action.revealDefinitionAside')<CR>
+  nnoremap <silent> ]c <Cmd>call VSCodeCall('workbench.action.editor.nextChange')<CR>
+  nnoremap <silent> [c <Cmd>call VSCodeCall('workbench.action.editor.previousChange')<CR> 
+  nnoremap <silent> <c-k> <Cmd>call VSCodeCall('editor.action.showHover')<CR>
+  nnoremap <silent> gd <Cmd>call VSCodeCall(v:count ? 'typescript.goToSourceDefinition' : 'editor.action.revealDefinition')<CR>
+  nnoremap <silent> gD <Cmd>call VSCodeCall('editor.action.goToImplementation')<CR>
+  nnoremap <silent> gr <Cmd>call VSCodeCall('references-view.find')<CR>
+  nnoremap <silent> gR <Cmd>call VSCodeCall('references-view.findImplementations')<CR>
   nnoremap <leader>db <Cmd>call VSCodeNotify('editor.debug.action.toggleBreakpoint')<CR>
   nnoremap gr <Cmd>call VSCodeNotify('references-view.findReferences')<CR>
   nnoremap <leader>h <Cmd>call VSCodeNotify('editor.fold')<CR>
