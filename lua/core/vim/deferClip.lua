@@ -66,12 +66,9 @@ function M.copy(lines, regtype)
   add_entry({ lines = lines, regtype = regtype })
   active_entry = { lines = lines, regtype = regtype }
   sync_to()
-  print("copy")
 end
 
-print("paste")
 function M.get_active()
-  print("paste")
   return { active_entry.lines, active_entry.regtype }
 end
 

@@ -1,6 +1,3 @@
-print("hallo init.lua")
-print(vim.fn.getcwd())
-print(package.path)
 -- bootstrap lazy.nvim, LazyVim and your plugins
 -- local ensure_packer = function()
 --   local fn = vim.fn
