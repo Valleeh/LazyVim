@@ -248,6 +248,9 @@ return {
     "nvim-lua/plenary.nvim",
   },
   {
+  "ThePrimeagen/vim-be-good"
+  },
+  {
   "mg979/vim-visual-multi"
   },
   "svermeulen/vim-subversive",
